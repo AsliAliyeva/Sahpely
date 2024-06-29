@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+header { 
+    height: 100vh;
+    background: url('img/header.jpg') center/cover fixed;
+}
+nav {
+    height: 77px;
+    background-color: white;
+    padding: 10px 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 52px;
+    color: #666;
+    font-weight: 600;
+}
+nav i {
+    color: #3a52bf;
+    cursor: pointer;
+}
+.superHero {
+    display: flex;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: #fff;
+    font-size: 32px;
+    line-height: 40px ;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+.superHero p {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+.btn {
+    display: inline-block;
+    line-height: 24px;
+    min-width: 200px;
+    padding:13px 26px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: normal;
+}
+.btnBenovse {
+    background-color: #745cf9;
+    border-color: #745cf9;
+}
+.btnTran {
+    border: 2px solid white;
+}
+main {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width:768px) {
+    nav {
+        justify-content: space-around;
+    }
+    nav>i {        display: none !important;}
+    .menuBar {
+        display: flex;
+        align-items: center ;
+        gap: 48px;
+    }
+    #menu {  display: flex; }
+    #menu li {  margin-left: 24px;}
+    #menu a{
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: #4c4c4c;
+    }
+}
