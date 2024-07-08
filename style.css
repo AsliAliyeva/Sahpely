@@ -13,13 +13,27 @@ header {
     background: url('img/header.jpg') center/cover fixed;
 }
 nav {
-    height: 77px;
+    height: 20vh;
     background-color: white;
     padding: 10px 31px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
+input[type="checkbox"]:checked~ul{  display: none;}
+
+label {
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    margin-top: 10px;
+    width: 48%;
+    font-size: 24px;
+    cursor: pointer;
+}
+#inp {  display: none;}
+
 #logo {
     display: inline-block;
     font-size: 24px;
@@ -27,7 +41,13 @@ nav {
     color: #666;
     font-weight: 300;
 }
-#menu {display: none;}
+#menu{background-color: white; width: 100vw; text-align: center;}
+#menu li {
+    padding: 5px 0;
+    font-size: 1em;
+    margin: 10px 0;
+}
+#menu li a {color: black;}
 nav i {
     color: #3a52bf;
     cursor: pointer;
@@ -91,9 +111,8 @@ main {
 .mac {
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
-.mac img {width: 100vw;}
+.mac img {width: 90vw;}
 .mac p {text-align: center;}
 .mac a {
     text-align: center;
@@ -139,7 +158,7 @@ main {
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    margin: 10px;
+    padding: 10px;
 }
 .galeryItem img {
     width: 100%;
@@ -240,16 +259,28 @@ main {
 }
 footer p , footer h5 , h6 {color: #fff;}
 @media only screen and (min-width:768px) {
-    nav {  justify-content: space-around;}
+    nav {  
+        flex-direction: row;
+        justify-content: space-between;
+        height: 77px;
+        position: fixed;
+        width: 100vw;
+    }
     nav>i {  display: none !important;}
     .menuBar {
         display: flex;
         align-items: center ;
         gap: 48px;
     }
+    label {   display: none;}
+
     h1 {font-size: 60px;}
     h5 {padding: 0 30px;}
-    #menu {  display: flex; }
+    #menu {  
+        display: flex; 
+        width: 70vw;
+        justify-content: flex-end;
+    }
     #menu li {  margin-right: 24px;}
     #menu a{
         font-size: 13px;
@@ -258,6 +289,7 @@ footer p , footer h5 , h6 {color: #fff;}
         letter-spacing: -1px;
         color: #4c4c4c;
     }
+    #menu i {padding: 15px 5px;}
     .container {   max-width: 80vw;}
     .mac {
         flex-direction: row;
