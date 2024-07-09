@@ -20,6 +20,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 }
 input[type="checkbox"]:checked~ul{  display: none;}
 
@@ -111,15 +112,18 @@ main {
 .mac {
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
 }
-.mac img {width: 90vw;}
-.mac p {text-align: center;}
-.mac a {
+.comp img {width: 100%;}
+.comp { width: 90%; margin: auto;}
+.card p {text-align: center;  width: 90%; margin: auto;}
+.card a {
+    display: inline-block;
     text-align: center;
-    justify-content: center;
-    margin-top: 10px;
+    width: 25%;
+    margin: 10px auto;
 }
-.mac div { display: flex; flex-direction: column;}
+.card { display: flex; flex-direction: column;}
 
 #div3 { 
     height: 100vh;
@@ -134,8 +138,7 @@ main {
 }
 #div4 img { 
     width: 70vw; 
-    height: 70vh;
-    margin: 10px;
+    height: 50vh;
 }
 #div4 a {text-align: center; margin: 10px auto;}
 
@@ -258,6 +261,8 @@ main {
     margin:  10px;
 }
 footer p , footer h5 , h6 {color: #fff;}
+
+
 @media only screen and (min-width:768px) {
     nav {  
         flex-direction: row;
@@ -273,7 +278,6 @@ footer p , footer h5 , h6 {color: #fff;}
         gap: 48px;
     }
     label {   display: none;}
-
     h1 {font-size: 60px;}
     h5 {padding: 0 30px;}
     #menu {  
@@ -293,18 +297,18 @@ footer p , footer h5 , h6 {color: #fff;}
     .container {   max-width: 80vw;}
     .mac {
         flex-direction: row;
-        margin: 10px 0;
-        padding: 0 30px;
+        padding: 10px 30px;
     }
-    .mac img { max-width: 600px;}
-    .mac div {justify-content: center;}
-    .mac a {
+    .card { display: flex; justify-content: center;}
+    .card a {
         max-width: 200px;
         align-self: center;
     }
+    .comp {width: 100vw;}
     #change {order: -1;}
     #div3 {    height: 50vh; }
     #div4 {width: 50%; margin: auto;}
+
     #galery { 
         flex-direction: row;
         justify-content: center;
